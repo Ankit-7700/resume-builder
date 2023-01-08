@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: black;
+            align-items: center;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            opacity: 70%;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background-image: url("./assets/office-environments.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        p {
+            color: red;
+            font-size: 30px;
+            margin: 5px 25px;
+        }
+
+        .menu {
+            /* background-color: red; */
+            margin: 0px 20px;
+        }
+
+        .menu ul {
+            justify-content: space-between;
+            /* background-color: burlywood; */
+        }
+
+        .menu ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 5px 20px;
+            /* background-color: yellow; */
+
+        }
+
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            
+        }
+        .menu ul li a:hover{
+            color:crimson;
+            font-size: 34px;
+        }
+
+        .profile {
+            display: inline-block;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            height: 90vh;
+            display: flex;
+        }
+
+        .photo {
+            align-items: center;
+            margin-top: 35px;
+            width: 300px;
+            height: 300px;
+
+            /* background-color: burlywood; */
+            display: inline-block;
+            border: 7px solid crimson;
+            padding: 7px;
+            border-radius: 50%;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .intro {
+            align-items: center;
+            margin-top: 50px;
+            width: fit-content;
+            height: fit-content;
+            /* background-color: burlywood; */
+            display: inline-block;
+        }
+
+        .profile .intro {
+            color: "balck";
+        }
+
+        .profile .intro .text1 {
+            font-size: 27px;
+        }
+
+        .profile .intro .text2 {
+            font-size: 75px;
+            font-weight: 600;
+            margin-left: -3px;
+            color: crimson;
+        }
+
+        .profile .intro .text3 {
+            font-size: 40px;
+            margin: 5px 0;
+            ;
+        }
+
+        .about {
+            width: 100%;
+            height: fit-content;
+            background-color: black;
+            margin-top: 20px;
+            padding-bottom: 15px;
+            /* border: 2px solid red; */
+        }
+
+        .about .head {
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+
+        .about .head h2 {
+            color: whitesmoke;
+            font-weight: 400;
+            font-size: 50px;
+            /* border: 2px solid red; */
+            display: inline-block;
+        }
+
+        .content {
+            width: 100%;
+            height: fit-content;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content .contentleft {
+            width: 470px;
+            height: 400px;
+            /* padding: 10px; */
+            object-fit: cover;
+            /* border: 2px solid red; */
+            margin-left: 80px;
+        }
+
+        .content .contentleft img {
+            object-fit: cover;
+            width: 470px;
+            height: 400px;
+            border-radius: 70px 10px;
+        }
+
+        .content .contentright {
+            width: 470px;
+            height: 400px;
+            border: 2px solid white;
+            margin-right: 80px;
+            padding: 10px;
+            border-radius: 10px 70px;
+            ;
+        }
+
+        .content .contentright p {
+            color: white;
+            font-size: 30px;
+        }
+
+        .skills {
+            width: 100%;
+            height: 90vh;
+            margin-top: 20px;
+            background-color: black;
+        }
+
+        .skills .head {
+            width: 100%;
+            height: 10vh;
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+
+        .skills .head h2 {
+            color: whitesmoke;
+            font-weight: 400;
+            font-size: 50px;
+            /* border: 2px solid red; */
+            display: inline-block;
+        }
+
+        .content {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+
+
+        .content .card {
+            width: 26%;
+            height: 75vh;
+            border: 8px solid crimson;
+
+            justify-content: center;
+            background-color: white;
+            border-radius: 15px;
+            padding: 6px;
+        }
+
+        .content .card .texthead {
+
+            justify-content: center;
+            justify-items: center;
+            margin: 5px 3px;
+            display: flex;
+        }
+
+        .content .card .texthead p {
+            color: black;
+            font-size: 30px;
+            display: inline-block;
+        }
+
+        .content .card .textphoto {
+            width: 100%;
+            margin-top: 10px;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            /* border: 2px solid red; */
+            /* margin: 2px 5px; */
+        }
+
+        .content .card .textphoto img {
+            /* margin: 0px 5px; */
+            object-fit: cover;
+            width: 320px;
+            height: 210px;
+            border-radius: 15px;
+        }
+
+        .dsaphoto img {
+            border: 1px solid white;
+        }
+
+        .content .card .text {
+            margin: 20px 3px;
+
+        }
+
+        .content .card .text p {
+            color: black;
+            font-size: 20px;
+        }
+
+        .acheive {
+            width: 100%;
+            height: fit-content;
+            margin-top: 20px;
+            background-color: black;
+            padding-bottom: 30px;
+        }
+
+        .acheive .head {
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+
+        .acheive .head h2 {
+            color: whitesmoke;
+            font-weight: 400;
+            font-size: 50px;
+            /* border: 2px solid red; */
+            display: inline-block;
+        }
+
+        .container {
+            width: 100%;
+            height: fit-content;
+            margin-top: 20px;
+
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .container .acheivegif {
+            width: 400px;
+            height: 300px;
+        }
+
+        .container .acheivegif img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+
+
+        /* Stylingthe last h2 tag by giving margin bottom */
+        .progress-bar-container:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        /* Styling the h2 tag by giving color,
+        letter spacing, font-size etc.*/
+        .progress-bar-container h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #eee;
+            letter-spacing: 1px;
+            font-size: 15px;
+        }
+
+        /* Styling the border and box
+        effect of the progress bar*/
+        .progress-bar {
+            width: 500px;
+            height: 5px;
+            margin-top: 10px;
+            border: 1px solid #565656;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgb(245, 159, 0);
+        }
+
+        /* Stylingthe background color of each
+        animation and border radius */
+        .percentage {
+            display: block;
+            height: 100%;
+            background-color: orange;
+            border-radius: 5px;
+            animation: progress 1500ms ease-in 1;
+        }
+
+        /* Assigning width of each languages*/
+        .DSA {
+            width: 85%;
+        }
+
+        .java {
+            width: 70%;
+        }
+
+        .python {
+            width: 55%;
+        }
+
+        .webdevelopment {
+            width: 75%;
+        }
+
+        .SQL {
+            width: 65%;
+        }
+
+        .ReactNative {
+            width: 55%;
+        }
+
+        /* Animating the progress bar by
+        initially starting from 0*/
+        @keyframes progress {
+            from {
+                width: 0;
+            }
+        }
+
+        .contact {
+            width: 100%;
+            height: fit-content;
+            background-color: white;
+        }
+
+        .contact .head {
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* border: 2px solid red; */
+        }
+
+        .contact .head h2 {
+            color: black;
+            font-weight: 400;
+            font-size: 50px;
+            /* border: 2px solid red; */
+            /* display: inline-block; */
+        }
+        .contact .links{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .contact .links .link1 ul li .linkimg{
+            width: 25px;
+            height: 22px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .contact .links .link1 ul li img{
+            width: 25px;
+            height: 22px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .contact .links .link1 ul li a{
+            list-style: none;
+            color: black;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        .contact .links .link2 ul li .linkimg{
+            width: 25px;
+            height: 22px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .contact .links .link2 ul li img{
+            width: 25px;
+            height: 22px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .contact .links .link2 ul{
+            text-decoration: none;
+        }
+        .contact .links .link2 ul li a{
+            list-style: none;
+            color: black;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" id="Home">
+            <div class="logo">
+                <p>Portfolio</p>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="profile">
+            <div class="photo">
+                <img src="./assets/ankitCasualprocess.jpeg">
+            </div>
+            <div class="intro">
+                <div class="text1">Hello, My name is </div>
+                <div class="text2">Ankit Pal </div>
+                <div class="text3">And I'am a <span style="color: rgb(252, 177, 39);">Software</span> Enginner </div>
+            </div>
+        </div>
+    </header>
+    <section class="about" id="About">
+        <div class="head">
+            <h2>About</h2>
+        </div>
+        <div class="content">
+            <div class="contentleft">
+                <img src="./assets/working man.gif" alt="about">
+            </div>
+            <div class="contentright">
+                <p>I am a software Enginner at Nirvana solutions. I am persueing my B-Tech from GLA University, I
+                    have good knowledge in Data Structures Algorithms and web Development.I also have good problem
+                    solving and Analytical skills</p>
+            </div>
+        </div>
+    </section>
+    <Section class="skills" id="Skills">
+        <div class="head">
+            <h2>Skills</h2>
+        </div>
+        <div class="content">
+
+            <div class="card1 card">
+                <div class="texthead">
+                    <p>Web Development</p>
+                </div>
+                <div class="textphoto">
+                    <img src="./assets/webdevelopmentimage.jpg" alt="textPhoto">
+                </div>
+                <div class="text">
+                    <p>I have intermediate knowledge of HTML, CSS and Javascript which are bais necessities for
+                        web development. I also made several websites for college projects</p>
+                </div>
+            </div>
+
+
+            <div class="card2 card">
+                <div class="texthead">
+                    <p>Analytical Skills</p>
+                </div>
+                <div class="textphoto">
+                    <img src="./assets/Analyticalimage.jpg" alt="textPhoto">
+                </div>
+                <div class="text">
+                    <p>Analytical skills are the traits and abilities that allow you to observe, research and
+                        interpret a subject to develop complex ideas and solutions. When you use several of
+                        these skills together.</p>
+                </div>
+            </div>
+
+            <div class="card3 card">
+                <div class="texthead">
+                    <p>Problem Solving</p>
+                </div>
+                <div class="textphoto dsaphoto">
+                    <img src="./assets/datastructureimage.jpg" alt="textPhoto">
+                </div>
+                <div class="text">
+                    <p>A data structure is defined as a particular way of storing and organizing data in our
+                        devices to use the data efficiently and effectively. </p>
+                </div>
+            </div>
+
+        </div>
+    </Section>
+    <section class="acheive" id="Acheive">
+        <div class="head">
+            <h2>Acheivements</h2>
+        </div>
+        <div class="container">
+            <div class="acheivegif">
+                <img src="./assets/achievement.gif" alt="Acheivement gif">
+            </div>
+
+            <div class="skillscontainer">
+                <div class="progress-bar-container">
+                    <h2>DSA</h2>
+                    <div class="progress-bar">
+                        <span class="percentage DSA"></span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <h2>Java</h2>
+                    <div class="progress-bar">
+                        <span class="percentage java"></span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <h2>Python</h2>
+                    <div class="progress-bar">
+                        <span class="percentage python"></span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <h2>Web Development</h2>
+                    <div class="progress-bar">
+                        <span class="percentage webdevelopment"></span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <h2>SQL</h2>
+                    <div class="progress-bar">
+                        <span class="percentage SQL"></span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <h2>ReactNative</h2>
+                    <div class="progress-bar">
+                        <span class="percentage ReactNative"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="Contact">
+        <div class="head">
+            <h2>Contacts</h2>
+        </div>
+
+        <div class="links">
+            <div class="link1">
+                <ul>
+                    <li><div class="linkimg"><img src="./assets/emailimage.jpg"></div><a href="#">ankitpalgrt@gmail.com</a></li>
+                    <li><img src="./assets/linkedinimage.jpg"><a href="https://www.linkedin.com/in/ankit-pal-93a6aa23a/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="link2">
+                <ul>
+                    <li><img src="./assets/github.jpg"><a href="https://github.com/Ankit-7700" target="_blank">githup</a></li>
+                    <li><img src="./assets/leetcodeimage.jpg"><a href="https://leetcode.com/Ankit_7700/" target="_blank">leetcode</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>
